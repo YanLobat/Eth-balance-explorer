@@ -1,0 +1,93 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Set a font and a base background color */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Basic styling for your app container */
+  .App {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Basic styling for the header */
+  .App-header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Style for the main content area */
+  main {
+    margin-top: 20px;
+  }
+  
+  /* Basic button styling */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  
+/* You might add more styles or class/ID-specific styles as needed */
+  
+  .list-group {
+    list-style: none;
+    padding: 0;
+  }
+  .list-group a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+  .list-group a:hover {
+    text-decoration: underline;
+  }
+  .list-group a > img {
+    margin-right: 5px;
+  }
+  .list-group li {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+  }
+  .errored-input[type="text"] {
+    border: 1px solid red;
+  }
+  .address-input-form {
+    display: flex;
+    align-items: flex-start; 
+  }
+.error-message {
+    color: red;
+}
