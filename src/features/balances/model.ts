@@ -71,18 +71,17 @@ export const $balances = createStore<BalanceDict>({})
 export const updateBalances = createEvent<TokenFullInfo>()
 export const fetchBalancesFx = createEffect(async (address: string) => {   
   const checkedAddress = getAddress(address) 
-    let count = 0
-    TOKENS.forEach(async ({token, contract_address, logo_url}) => {
-        const contract = new Contract(contract_address, abi, provider)
-        const balance = await contract.balanceOf(checkedAddress)
-        updateBalances({token, balance: balance.toString(), logo_url, contract_address})
-        
-        count++
-        increaseProgress(count*100/TOKENS.length)
-    })
-   
+  let count = 0
+  TOKENS.forEach(async ({token, contract_address, logo_url}) => {
+      const contract = new Contract(contract_address, abi, provider)
+      const balance = await contract.balanceOf(checkedAddress)
+      updateBalances({token, balance: balance.toString(), logo_url, contract_address})
+      
+      count++
+      increaseProgress(count*100/TOKENS.length)
+  })
 })
-
+fetchBalancesFx.finally.watch(console.log)
 sample({
   source: $balances,
   clock: updateBalances,
