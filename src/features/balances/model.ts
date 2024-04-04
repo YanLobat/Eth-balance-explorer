@@ -41,7 +41,7 @@ const TOKENS = [
     {
       "token": "SHIB",
       "contract_address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
-      "logo_url": `${ETHER_TOKEN_URL_PREFIX}imagesshibatoken_32.png`
+      "logo_url": `${ETHER_TOKEN_URL_PREFIX}images/shibatoken_32.png`
     },
     {
       "token": "LINK",
