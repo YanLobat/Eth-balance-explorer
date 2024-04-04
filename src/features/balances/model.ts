@@ -81,7 +81,8 @@ export const fetchBalancesFx = createEffect(async (address: string) => {
       increaseProgress(count*100/TOKENS.length)
   })
 })
-fetchBalancesFx.finally.watch(console.log)
+$balances.reset(fetchBalancesFx)
+
 sample({
   source: $balances,
   clock: updateBalances,
